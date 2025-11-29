@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+    <script src="https://unpkg.com/frappe-charts@latest/dist/frappe-charts.min.umd.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="icon" href="images/star.png">
+</head>
+<body>
+    
+    <div class="weather-container">
+    <div class="weather-app">
+        <div class="weather">
+            <input id="location" type="text" placeholder="search a location">
+            <ul id="autofill" class="autofill"></ul>
+            <button id="search"><img src="images/magnifying-glass.png"></button>
+
+            <!--switch unit of temperature-->
+            <button id="switch"> Switch Unit</button>
+            <button id="gps"><img src="images/location.png"></button>
+            
+            <div id="favorites-container" class="favorites-container">
+                <div id="tags-container" class="tags-container"></div>
+            </div>
+        </div>
+        <div class="weather-show">
+            <h1 class="weather-timezone"></h1>
+            <div class="temperature">
+                <div class="degree">
+                <h2 class="temperature-degree"></h2>
+                <div class="feels-like">
+                    <img src="images/temperature.png" class="feels-like-icon">
+                    <span id="feels-like"></span>
+                </div>
+            </div>
+        </div>
+        <img class="weather-icon">
+        <div class="temperature-description"></div>
+        <div class="details">
+            <div class="col">
+                <img src="images/humidity.png">
+                <div class="col">
+                    <p class="humidity"></p>  
+                </div> 
+            </div>
+            <div class="col">
+                <img src="images/windy.png">
+                <p class="wind"></p>  
+            </div>
+        </div>
+    </div>
+    <h3 class="forecast-title-hour"> 3 hourly based forecast</h3>
+    <div id="forecast-hourly" class="forecast-hourly"> 
+        <div class="forecast-hour">
+            <h3 class="forecast-hour-time"></h3>
+            <img class="forecast-hour-img"></img>
+            <h3 class="forecast-hour-temp"></h3>
+        </div>
+        <div class="forecast-hour">
+            <h3 class="forecast-hour-time"></h3>
+            <img class="forecast-hour-img"></img>
+            <h3 class="forecast-hour-temp"></h3>
+        </div>
+        <div class="forecast-hour">
+            <h3 class="forecast-hour-time"></h3>
+            <img class="forecast-hour-img"></img>
+            <h3 class="forecast-hour-temp"></h3>
+        </div>
+        <div class="forecast-hour">
+            <h3 class="forecast-hour-time"></h3>
+            <img class="forecast-hour-img"></img>
+            <h3 class="forecast-hour-temp"></h3>
+        </div>
+        <div class="forecast-hour">
+            <h3 class="forecast-hour-time"></h3>
+            <img class="forecast-hour-img"></img>
+            <h3 class="forecast-hour-temp"></h3>
+        </div>
+        <div class="forecast-hour">
+            <h3 class="forecast-hour-time"></h3>
+            <img class="forecast-hour-img"></img>
+            <h3 class="forecast-hour-temp"></h3>
+        </div>
+        <div class="forecast-hour">
+            <h3 class="forecast-hour-time"></h3>
+            <img class="forecast-hour-img"></img>
+            <h3 class="forecast-hour-temp"></h3>
+        </div>
+        <div class="forecast-hour">
+            <h3 class="forecast-hour-time"></h3>
+            <img class="forecast-hour-img"></img>
+            <h3 class="forecast-hour-temp"></h3>
+        </div>
+    </div>
+    </div>
+    <div id="forecast" class="forecast">
+        <h3 class="forecast-title">forecast for the next 5 days</h3>
+        <div class="forecast-item">
+            <h3 class="forecast-item-date"></h3>
+            <img class="forecast-item-img"></img>
+            <h3 class="forecast-item-temp"></h3>
+            <h3 class="forecast-description"></h3>
+        </div>
+        <div class="forecast-item">
+            <h3 class="forecast-item-date"></h3>
+            <img class="forecast-item-img"></img>
+            <h3 class="forecast-item-temp"></h3>
+            <h3 class="forecast-description"></h3>
+        </div>
+        <div class="forecast-item">
+            <h3 class="forecast-item-date"></h3>
+            <img class="forecast-item-img"></img>
+            <h3 class="forecast-item-temp"></h3>
+            <h3 class="forecast-description"></h3>
+        </div>
+        <div class="forecast-item">
+            <h3 class="forecast-item-date"></h3>
+            <img class="forecast-item-img"></img>
+            <h3 class="forecast-item-temp"></h3>
+            <h3 class="forecast-description"></h3>
+        </div>
+        <div class="forecast-item">
+            <h3 class="forecast-item-date"></h3>
+            <img class="forecast-item-img"></img>
+            <h3 class="forecast-item-temp"></h3>
+            <h3 class="forecast-description"></h3>
+        </div>
+        <div class="chart" id="chart"></div>
+    </div>
+   
+  
+</div>
+</body>
+
